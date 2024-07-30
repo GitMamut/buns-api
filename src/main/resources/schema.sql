@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS bakery;
+DROP TABLE IF EXISTS company;
+
+CREATE TABLE company(
+   id INT GENERATED ALWAYS AS IDENTITY,
+   name VARCHAR(255) NOT NULL UNIQUE,
+   PRIMARY KEY(id)
+);
+
+CREATE TABLE bakery(
+   id INT GENERATED ALWAYS AS IDENTITY,
+   name VARCHAR(255) NOT NULL,
+   address VARCHAR(255) NOT NULL,
+   company_id INT,
+   PRIMARY KEY(id),
+   CONSTRAINT fk_company
+      FOREIGN KEY(company_id) 
+        REFERENCES company(id)
+);
