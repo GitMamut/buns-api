@@ -14,11 +14,11 @@ import jakarta.persistence.Table;
 public class Bakery {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //IDENTITY strategy lets DB take care of providing ID sequence
     @Column
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
     
     @Column

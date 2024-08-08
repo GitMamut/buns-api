@@ -21,7 +21,7 @@ public class Company {
     @Column
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
     protected Company() {
