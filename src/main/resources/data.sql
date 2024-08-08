@@ -1,3 +1,6 @@
+-- this file will be used when intializing DB through JDBC
+-- see https://docs.spring.io/spring-boot/docs/1.1.0.M1/reference/html/howto-database-initialization.html
+
 INSERT INTO company (name) VALUES ('Hart');
 
 INSERT INTO bakery (name, address, company_id) 
